@@ -9,4 +9,6 @@ search.addEventListener('keyup', (event) => {
 	}
 })
 
-submit.onclick = () => console.log('here')
+submit.onclick = () => {
+	window.location.href = '/results/?search=' + 'asdf'
+}
