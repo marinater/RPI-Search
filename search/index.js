@@ -10,5 +10,5 @@ search.addEventListener('keyup', (event) => {
 })
 
 submit.onclick = () => {
-	window.location.href = '/results/?search=' + 'asdf'
+	window.location.href = '../results/?search=' + 'asdf'
 }

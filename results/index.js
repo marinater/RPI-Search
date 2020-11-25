@@ -25,3 +25,18 @@ const addResult = (url, title) => {
 	// const resultDiv = document.createElement('div')
 	// resultDiv.innerHTML
 }
+
+const search = document.getElementById('d1')
+const submit = document.getElementById('d2')
+
+search.addEventListener('keyup', (event) => {
+	event.preventDefault()
+	if (event.keyCode === 13) {
+		submit.focus()
+		submit.click()
+	}
+})
+
+submit.onclick = () => {
+	window.location.href = '/results/?search=' + 'asdf'
+}
