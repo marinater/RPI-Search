@@ -117,8 +117,8 @@ a:hover::before {
 	outline: none;
 }
 
-#search-container > *:hover,
-#search-container > *:focus {
+#search-container > *:hover:enabled,
+#search-container > *:focus:enabled {
 	background-color: #111111;
 }
 
@@ -130,4 +130,14 @@ a:hover::before {
 	#d2 {
 		flex: 0 0 80px;
 	}
+}
+
+button:disabled {
+	background: repeating-linear-gradient(
+		-55deg,
+		#111111,
+		#111111 10px,
+		#111111 10px,
+		#222222 20px
+	) !important;
 }

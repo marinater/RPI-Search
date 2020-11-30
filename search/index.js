@@ -3,12 +3,21 @@ const submit = document.getElementById('d2')
 
 search.addEventListener('keyup', (event) => {
 	event.preventDefault()
-	if (event.keyCode === 13) {
+	if (search.value && event.keyCode === 13) {
 		submit.focus()
 		submit.click()
 	}
 })
 
+setTimeout(() => {
+	submit.disabled = !search.value
+}, 0)
+
+search.oninput = () => {
+	submit.disabled = !search.value
+}
+
 submit.onclick = () => {
-	window.location.href = '../results/?search=' + 'asdf'
+	if (search.value)
+		window.location.href = '../results/?search=' + search.value
 }

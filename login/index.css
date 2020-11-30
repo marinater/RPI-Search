@@ -157,3 +157,13 @@ input[type='password'] {
 		flex: 0 0 80px;
 	}
 }
+
+button:disabled {
+	background: repeating-linear-gradient(
+		-55deg,
+		#111111,
+		#111111 10px,
+		#111111 10px,
+		#222222 20px
+	) !important;
+}

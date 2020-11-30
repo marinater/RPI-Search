@@ -214,20 +214,17 @@ select:active {
 	background-color: transparent;
 }
 
-#page-number:focus,
-#page-number:active {
-	background-color: #111111;
-}
-
 button {
 	flex: 0 0 150px;
 	outline: none;
 }
 
-#pagination-container-2 > button:hover,
-#search-container > *:focus,
-#search-container > *:hover,
-#search-container > *:focus {
+#page-number:focus:enabled,
+#page-number:active:enabled,
+#pagination-container-2 > button:hover:enabled,
+#pagination-container-2 > button:hover:active,
+#search-container > *:hover:enabled,
+#search-container > *:focus:enabled {
 	background-color: #111111;
 }
 
@@ -249,4 +246,14 @@ button {
 	#d2 {
 		flex: 0 0 80px;
 	}
+}
+
+button:disabled {
+	background: repeating-linear-gradient(
+		-55deg,
+		#111111,
+		#111111 10px,
+		#111111 10px,
+		#222222 20px
+	) !important;
 }
